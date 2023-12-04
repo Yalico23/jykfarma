@@ -1,0 +1,26 @@
+.nosotros{
+    background-image: url(/build/img/fondo-nosotros.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include grid(2,1rem);
+    padding: 3rem 5rem;
+    border-radius: 3rem;
+    margin-top: 10rem;
+    gap: 5rem;
+    @include telefono{
+        @include grid(1,1rem);
+    }
+    @include tablet{
+        @include grid(1,1rem);
+    }
+}
+.nosotros-img{
+    display: flex;
+    align-items: center;
+}
+.nosotros-info{
+    h2{
+        text-align: left;
+        font-weight: bold;
+    }
+}

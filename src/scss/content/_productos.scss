@@ -1,0 +1,67 @@
+.productos{
+    @include grid(3,2rem);
+    margin-top: 5rem;
+    @include telefono{
+        @include grid(1,1rem);
+    }
+}
+
+.contenido-producto{
+    padding: 0.5rem;
+        h3,p{
+            margin: 0;
+            text-align: center;
+        }
+}
+.producto ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+    li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        picture{
+            margin-right: 1rem;
+            height: 100%;
+            width: 6rem;
+        }
+        p{
+            font-weight: $black;
+        }
+    }
+}
+.producto picture source,img{
+    max-width: 100%;
+}
+
+.producto-chico{
+    padding: 2rem;
+    margin-top: 1rem;
+}
+.producto-chico ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+    li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        picture{
+            margin-right: 1rem;
+            height: 100%;
+            width: 6rem;
+        }
+        p{
+            font-weight: $black;
+        }
+    }
+}
+.imagen-chica{
+    max-width: 20rem;
+    margin: 0 auto;
+}

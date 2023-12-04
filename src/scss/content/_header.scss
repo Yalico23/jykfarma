@@ -1,0 +1,84 @@
+header {
+    padding-top: 2rem;
+}
+
+header,
+main {
+    background-color: $verde-azul;
+}
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem 3rem;
+
+    @include telefono {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.logo {
+
+    source,
+    img {
+        width: 30rem;
+        border-radius: 5rem;
+    }
+}
+.contenedor-nav {
+    background-color: $verde-azul;
+    &.fijo {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        box-shadow: 0px 8px 20px -5px #000000;
+        @include tablet{
+            display: none;
+        }
+    }
+}
+nav {
+    padding: 2rem 0 2rem 0;
+    width: 100vh;
+    a {
+        padding: 1rem 2rem;
+        color: $negro;
+    }
+    @include tablet{
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+        }  
+}
+/*Mobile Menu*/
+.mobile-menu{
+    display: none;
+    background-color: $verde-azul;
+    @include tablet{
+        display: flex;
+        justify-content: center;
+        padding-top: 3rem;
+    }
+    svg{
+        display: block;
+        width: 5rem;
+        cursor: pointer;
+    }
+}
+
+.mostrar{
+    transition: visibility 0.3s ease-in-out, opacity 0.5s linear, height 0.5s linear;
+    height: auto;
+    visibility: visible;
+    opacity: 1;  
+    @include tablet{
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
+}

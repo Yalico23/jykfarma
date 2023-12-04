@@ -1,0 +1,44 @@
+.imagen-principal {
+    background-image:linear-gradient(40deg, rgba(108,172,228,1) 0%, rgba(230,244,241,0.5) 100%),url(/build/img/bg-farmacia.webp);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: cover;
+    padding: 1rem 2rem;
+    @include grid(2,1rem);
+    border-radius: 3rem;
+    gap: 1rem;
+    @include telefono{
+        @include grid(1,1rem);   
+    }
+}
+.imagen-principal-hijo{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1{
+        text-align: left
+    }
+    @include telefono{
+        h1{
+            text-align: center;
+        }
+    }
+}
+.imagen-principal-hijo-img{
+    picture{
+        height: 100%
+    }
+}
+.imagen-secundaria {
+    @include grid(3, 5rem);
+    padding: 0 8rem;
+    .imagen-secundaria-hijo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    @include telefono{
+        @include grid(1,1rem);
+    }
+}

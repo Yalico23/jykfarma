@@ -1,0 +1,16 @@
+@import 'base/normalize';
+@import 'base/variables';
+@import 'base/globales';
+@import 'base/mixins';
+@import 'base/botones';
+@import 'base/utilidades';
+/*Content*/
+@import 'content/header';
+@import 'content/usuario';
+@import 'content/main';
+@import 'content/productos';
+@import 'content/nosotros';
+@import 'content/contacto';
+@import 'content/footer';
+@import 'content/formularios';
+@import 'content/admin';
