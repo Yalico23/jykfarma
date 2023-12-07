@@ -2,7 +2,6 @@
 namespace Controllers;
 
 use MVC\Router;
-use Intervention\Image\ImageManagerStatic as Image;
 use Model\Cliente;
 
 class ClienteController
@@ -42,7 +41,6 @@ class ClienteController
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $cliente->sincronizar($_POST);
-        
         
             $errores = $cliente->validar();
         

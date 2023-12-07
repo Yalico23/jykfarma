@@ -23,7 +23,6 @@ function css(callback) {
     .pipe(postcss([autoprefixer(),cssnano()]))
     .pipe(sourcemaps.write('.'))
     .pipe(dest('./public/build/css'));
-
     callback();
 }
 function versionWebp(callback) {

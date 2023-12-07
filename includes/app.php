@@ -1,15 +1,10 @@
-<?php 
-    
-    require __dir__ . '/funciones.php';
-    require __dir__ . '/config/database.php';
-    require __DIR__.'/../vendor/autoload.php';
-
-
-    $db = conectarDB();
-
+<?php
 use Model\ActiveRecord;
+require __DIR__ . '/../vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->safeLoad();
+require __DIR__ . '/funciones.php';
+require __DIR__ . '/config/database.php';
 
-    ActiveRecord::setDB($db);
-
-    
-?>
+$db = conectarDB();
+ActiveRecord::setDB($db);

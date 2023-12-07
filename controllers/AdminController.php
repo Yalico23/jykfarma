@@ -1,7 +1,5 @@
 <?php
-
 namespace Controllers;
-
 use MVC\Router;
 use Model\Empleado;
 use Model\Cliente;
@@ -10,7 +8,6 @@ use Model\Proveedor;
 
 class AdminController
 {
-
     public static function index(Router $router)
     {
         $resultado = $_GET['resultado'] ?? null;

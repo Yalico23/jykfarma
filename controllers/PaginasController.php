@@ -23,12 +23,12 @@ class PaginasController
             $mail = new PHPMailer();
             //configurar SMTP
             $mail->isSMTP();
-            $mail->Host = 'sandbox.smtp.mailtrap.io';
+            $mail->Host = $_ENV['EMAIL_HOST'];
             $mail->SMTPAuth = true;
-            $mail->Username = '0c6a2f346a492d';
-            $mail->Password = '053456164e857b';
+            $mail->Username = $_ENV['EMAIL_USER'];
+            $mail->Password = $_ENV['EMAIL_PASSWORD'];
             $mail->SMTPSecure = 'tls'; //No esta pero lo agrega - es la seguridad
-            $mail->Port = 2525;
+            $mail->Port = $_ENV['EMAIL_PORT'];
 
             //Configurar contenido del email
             $mail->setFrom('admin@farma.com'); //Quien mando el email
